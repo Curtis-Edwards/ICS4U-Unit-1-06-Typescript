@@ -69,7 +69,6 @@ console.log(file)
 const newArray = file.split(/\r?\n/)
 // pop last element, since it will be empty (the EOF)
 newArray.pop()
-console.log(newArray)
 
 // process
 let mean = meanCalculation(newArray)
