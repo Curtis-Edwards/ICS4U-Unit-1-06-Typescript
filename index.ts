@@ -21,13 +21,14 @@ function meanCalculation (newArray) {
 
 function medianCalculation (newArray) {
   // This function calculates the median
+  newArray.sort((a, b) => a - b);
   let median = 0
   if (array.length % 2 === 0) {
-    median = medianCalculation(newArray)
+    median = ((newArray.length / 2) + ((newArray.length / 2) + 1) / 2)
   } else {
     median = Math.ceil(array.length / 2)
   }
-  return median(array[middle])
+  return median
 }
 
 function modeCalculation (newArray) {
@@ -36,16 +37,18 @@ function modeCalculation (newArray) {
   let count = {}
   let maxCount = 0
 
-  for (let num of array) {
-    count[num] = (count[num] || 0) + 1
-    if (count[num] > maxCount) {
-      maxCount = count[num]
+  // Count occurrences of each number
+  for (let counter of array) {
+    count[counter] = (count[counter] || 0) + 1
+    if (count[counter] > maxCount) {
+      maxCount = count[counter]
     }
   }
 
-  for (let num in count) {
-    if (count[num] === maxCount) {
-      modes.push(parseFloat(num))
+  // Identify modes
+  for (let counter in count) {
+    if (count[counter] === maxCount) {
+      modes.push(parseFloat(counter))
     }
   }
 
