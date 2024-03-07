@@ -9,7 +9,7 @@
 // get arguments
 import { readFileSync } from 'fs'
 
-function meanCalculation (newArray) {
+/*function meanCalculation (newArray) {
   // This function calculates the mean
   let sum = 0;
   for (let counter = 0; counter < newArray.length; counter++) {
@@ -17,7 +17,7 @@ function meanCalculation (newArray) {
   }
   let mean = sum / newArray.length
   return mean
-}
+}*/
 
 function medianCalculation (newArray) {
   // This function calculates the median
@@ -31,7 +31,7 @@ function medianCalculation (newArray) {
   return median
 }
 
-function modeCalculation (newArray) {
+/*function modeCalculation (newArray) {
   // This function calculates the mode
   let modes = []
   let count = {}
@@ -53,7 +53,7 @@ function modeCalculation (newArray) {
   }
 
   return modes;
-}
+}*/
 
 // print process.argv
 process.argv.forEach(function (val, index, array) {
@@ -67,16 +67,16 @@ const file = readFileSync(process.argv[2], 'utf8')
 
 const newArray = file.split(/\r?\n/)
 // pop last element, since it will be empty (the EOF)
-// newArray.pop()
+newArray.pop()
 
 // process
-let mean = meanCalculation(newArray)
+//let mean = meanCalculation(newArray)
 let median = medianCalculation(newArray)
-let mode = modeCalculation(newArray)
+//let mode = modeCalculation(newArray)
 
-console.log("\nMean:", mean)
+//console.log("\nMean:", mean)
 console.log("Median:", median)
-console.log("Mode:", mode)
+//console.log("Mode:", mode)
 
 
 console.log("\nDone.")
