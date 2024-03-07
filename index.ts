@@ -24,7 +24,7 @@ function medianCalculation (newArray) {
   newArray.sort((a, b) => a - b);
   let median = 0
   if (newArray.length % 2 === 0) {
-    median = (newArray[(newArray.length / 2)] + newArray[(newArray.length / 2) + 1)]) / 2
+    median = (newArray[(newArray.length / 2)] + newArray[(newArray.length / 2) + 1]) / 2
   } else {
     median = Math.ceil(newArray.length / 2)
   }
