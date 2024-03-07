@@ -64,7 +64,6 @@ console.log(process.argv[2])
 
 
 const file = readFileSync(process.argv[2], 'utf8')
-console.log(file)
 
 const newArray = file.split(/\r?\n/)
 // pop last element, since it will be empty (the EOF)
