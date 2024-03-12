@@ -21,14 +21,15 @@ import { readFileSync } from 'fs'
 
 function medianCalculation (newArray) {
   // This function calculates the median
+  console.log(newArray)
   newArray.sort((a, b) => a - b);
   console.log(newArray)
   let median = 0
   console.log(newArray.length)
   if ((newArray.length + 1) % 2 === 0) {
     console.log("test1\n")
-    console.log(newArray[((newArray.length + 1) / 2)])
-    console.log(newArray[((newArray.length + 1) / 2) + 1])
+    console.log(newArray)
+    console.log(newArray)
   } else {
     median = newArray[((newArray.length + 1) / 2)]
   }
