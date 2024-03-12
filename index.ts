@@ -15,7 +15,7 @@ import { readFileSync } from 'fs'
   for (let counter = 0; counter < newArray.length; counter++) {
     sum += parseFloat(newArray[counter])
   }
-  let mean = sum / newArray.length
+  let mean = sum / (newArray.length + 1)
   return mean
 }*/
 
@@ -25,10 +25,9 @@ function medianCalculation (newArray) {
   let median = 0
   console.log(newArray.length)
   if ((newArray.length + 1) % 2 === 0) {
-    console.log("test1")
+    console.log("test1\n")
     console.log(newArray[((newArray.length + 1) / 2)])
     console.log(newArray[((newArray.length + 1) / 2) + 1])
-    median = (newArray[((newArray.length + 1) / 2)] + newArray[((newArray.length + 1) / 2) + 1]) / 2
   } else {
     median = newArray[((newArray.length + 1) / 2)]
   }
@@ -79,7 +78,7 @@ let median = medianCalculation(newArray)
 //let mode = modeCalculation(newArray)
 
 //console.log("\nMean:", mean)
-console.log("Median:", median)
+//console.log("Median:", median)
 //console.log("Mode:", mode)
 
 
