@@ -72,7 +72,7 @@ const file = readFileSync(process.argv[2], 'utf8')
 
 const newArray = file.split(/\r?\n/)
 // pop last element, since it will be empty (the EOF)
-newArray.pop()
+// newArray.pop()
 
 // process
 //let mean = meanCalculation(newArray)
