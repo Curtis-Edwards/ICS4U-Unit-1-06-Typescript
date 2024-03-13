@@ -17,7 +17,7 @@ function meanCalculation (newArray) {
     sum += parseFloat(newArray[counter])
     console.log(counter)
   }
-  
+  console.log(sum)
   return mean
 }
 
@@ -42,7 +42,7 @@ console.log(process.argv[2])
 
 
 const file = readFileSync(process.argv[2], 'utf8')
-console.log(file)
+//console.log(file)
 
 const newArray = file.split(/\r?\n/)
 // pop last element, since it will be empty (the EOF)
@@ -50,7 +50,6 @@ newArray.pop()
 
 // process
 console.log(newArray)
-console.log(newArray.length)
 let mean = meanCalculation(newArray)
 let median = medianCalculation(newArray)
 let mode = modeCalculation(newArray)
