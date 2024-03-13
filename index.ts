@@ -24,11 +24,14 @@ function medianCalculation (newArray) {
   // This function calculates the median
   let median = 0
   let sum = 0
-  newArray.sort((a, b) => a - b)
-  sum = parseInt(newArray[newArray.length / 2]) +
-    parseInt(newArray[newArray.length / 2 + 1])
-  console.log(sum)
-  median = sum / 2
+  newArray.sort((a, b) => a - b) // sort array from lowest to highest
+  if (newArray.length % 2 === 0) {
+    sum = parseInt(newArray[newArray.length / 2]) +
+      parseInt(newArray[newArray.length / 2 + 1])
+    median = sum / 2
+  else {
+    median = Math.ceil(newArray.length / 2)
+  }
   return median
 }
 
