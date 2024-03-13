@@ -11,50 +11,19 @@ import { readFileSync } from 'fs'
 
 function meanCalculation (newArray) {
   // This function calculates the mean
-  let sum = 0
-  for (let counter = 0; counter < newArray.length; counter++) {
-    sum += parseFloat(newArray[counter])
-  }
-  let mean = sum / (newArray.length + 1)
+  let mean = 0
   return mean
 }
 
 function medianCalculation (newArray) {
   // This function calculates the median
-  let sum = 0
   let median = 0
-  newArray.sort((a, b) => a - b)
-  if (newArray.length % 2 === 0) {
-    sum = newArray[newArray.length / 2] +
-      newArray[(newArray.length / 2) + 1]
-    median = sum / 2
-  } else {
-    median = Math.celi(newArray[newArray.length / 2])
-  }
   return median
 }
 
 function modeCalculation (newArray) {
   // This function calculates the mode
-  let modes = []
-  let occurrences = {} // keep track of occurrences for each number
-  let highestOccurrences  = 0 // keep track of highest occurrences
-
-  // Count occurrences of each number
-  for (let counter of newArray) {
-    occurrences[counter] = (occurrences[counter] || 0) + 1
-    if (occurrences[counter] > highestOccurrences) {
-      highestOccurrences = occurrences[counter]
-    }
-  }
-
-  // Identify modes
-  for (let counter in occurrences) {
-    if (occurrences[counter] === highestOccurrences) {
-      modes.push(parseFloat(counter))
-    }
-  }
-
+  let modes = [0]
   return modes
 }
 
@@ -67,11 +36,15 @@ console.log(process.argv[2])
 
 
 const file = readFileSync(process.argv[2], 'utf8')
+console.log(file)
 
 const newArray = file.split(/\r?\n/)
+// pop last element, since it will be empty (the EOF)
+newArray.pop()
 
 // process
 console.log(newArray)
+console.log(newArray.length)
 let mean = meanCalculation(newArray)
 let median = medianCalculation(newArray)
 let mode = modeCalculation(newArray)
