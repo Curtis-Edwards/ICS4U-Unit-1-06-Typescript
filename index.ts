@@ -12,6 +12,12 @@ import { readFileSync } from 'fs'
 function meanCalculation (newArray) {
   // This function calculates the mean
   let mean = 0
+  let sum = 0
+  for (let counter = 0; counter < newArray.length; counter++) {
+    sum += parseFloat(newArray[counter])
+    console.log(counter)
+  }
+  
   return mean
 }
 
