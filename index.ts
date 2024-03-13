@@ -25,8 +25,8 @@ function medianCalculation (newArray) {
   let median = 0
   let sum = 0
   newArray.sort((a, b) => a - b)
-  sum = (newArray[newArray.length / 2]) +
-    (newArray[newArray.length / 2 + 1])
+  sum = parseInt(newArray[newArray.length / 2]) +
+    parseInt(newArray[newArray.length / 2 + 1])
   console.log(sum)
   median = sum / 2
   return median
