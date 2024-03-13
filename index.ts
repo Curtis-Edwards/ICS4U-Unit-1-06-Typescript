@@ -49,7 +49,7 @@ function modeCalculation (newArray) {
   }
 
   // Identify modes
-  for (let counter in count) {
+  for (let counter in occurrences) {
     if (occurrences[counter] === highestOccurrences) {
       modes.push(parseFloat(counter))
     }
