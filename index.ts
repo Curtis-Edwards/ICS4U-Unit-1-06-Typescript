@@ -37,7 +37,25 @@ function medianCalculation (newArray) {
 
 function modeCalculation (newArray) {
   // This function calculates the mode
-  let modes = [0]
+  let modes = []
+  let occurrences = {} // keep track of occurrences for each number
+  let highestOccurrences  = 0 // keep track of highest occurrences
+
+  // Count occurrences of each number
+  for (let counter of newArray) {
+    occurrences[counter] = (occurrences[counter] || 0) + 1
+    if (occurrences[counter] > highestOccurrences) {
+      highestOccurrences = occurrences[counter]
+    }
+  }
+
+  // Identify modes
+  for (let counter in occurrences) {
+    if (occurrences[counter] === highestOccurrences) {
+      modes.push(parseFloat(counter))
+    }
+  }
+
   return modes
 }
 
