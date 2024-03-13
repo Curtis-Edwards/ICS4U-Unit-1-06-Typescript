@@ -38,19 +38,19 @@ function modeCalculation (newArray) {
   // This function calculates the mode
   let modes = []
   let occurrences = {} // keep track of occurrences for each number
-  let maxOccurrences  = 0 // keep track of highest occurrences
+  let highestOccurrences  = 0 // keep track of highest occurrences
 
   // Count occurrences of each number
   for (let counter of newArray) {
     occurrences[counter] = (occurrences[counter] || 0) + 1
-    if (occurrences[counter] > maxCount) {
-      maxCount = occurrences[counter]
+    if (occurrences[counter] > highestOccurrences) {
+      highestOccurrences = occurrences[counter]
     }
   }
 
   // Identify modes
   for (let counter in count) {
-    if (occurrences[counter] === maxOccurrences) {
+    if (occurrences[counter] === highestOccurrences) {
       modes.push(parseFloat(counter))
     }
   }
