@@ -15,9 +15,8 @@ function meanCalculation (newArray) {
   let sum = 0
   for (let counter = 0; counter < newArray.length; counter++) {
     sum += parseFloat(newArray[counter])
-    console.log(counter)
   }
-  console.log(sum)
+  mean = sum / newArray.length 
   return mean
 }
 
