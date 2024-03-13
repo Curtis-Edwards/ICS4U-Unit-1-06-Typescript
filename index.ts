@@ -9,7 +9,7 @@
 // get arguments
 import { readFileSync } from 'fs'
 
-function meanCalculation (newArray) {
+function meanCalculation (newArray: number[]) {
   // This function calculates the mean
   let mean = 0
   let sum = 0
@@ -20,7 +20,7 @@ function meanCalculation (newArray) {
   return mean
 }
 
-function medianCalculation (newArray) {
+function medianCalculation (newArray: number[]) {
   // This function calculates the median
   let median = 0
   let sum = 0
@@ -35,7 +35,7 @@ function medianCalculation (newArray) {
   return median
 }
 
-function modeCalculation (newArray) {
+function modeCalculation (newArray: number[]) {
   // This function calculates the mode
   let modes = []
   let occurrences = {} // keep track of occurrences for each number
