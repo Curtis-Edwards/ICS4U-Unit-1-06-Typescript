@@ -26,12 +26,11 @@ function medianCalculation (newArray) {
   console.log(newArray)
   let median = 0
   console.log(newArray.length)
-  if ((newArray.length + 1) % 2 === 0) {
+  if (newArray.length % 2 === 0) {
     console.log("test1\n")
-    console.log(newArray)
-    console.log(newArray)
+    console.log(newArray[newArray.length % 2])
+    console.log((newArray[newArray.length % 2) + 1])
   } else {
-    median = newArray[((newArray.length + 1) / 2)]
   }
   return median
 }
