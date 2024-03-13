@@ -28,7 +28,7 @@ function medianCalculation (newArray) {
       newArray[(newArray.length / 2) + 1]
     median = sum / 2
   } else {
-    median = Math.celi(newArray[newArray.length / 2]
+    median = Math.celi(newArray[newArray.length / 2])
   }
   return median
 }
