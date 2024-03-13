@@ -24,8 +24,8 @@ function medianCalculation (newArray) {
   // This function calculates the median
   let median = 0
   newArray.sort((a, b) => a - b)
-  consloe.log(newArray.length / 2)
-  consloe.log(newArray.length / 2 + 1)
+  console.log(newArray.length / 2)
+  console.log(newArray.length / 2 + 1)
   return median
 }
 
