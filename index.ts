@@ -23,6 +23,7 @@ function meanCalculation (newArray) {
 function medianCalculation (newArray) {
   // This function calculates the median
   let median = 0
+  let sum = 0
   newArray.sort((a, b) => a - b)
   sum = (newArray[newArray.length / 2]) +
     (newArray[newArray.length / 2 + 1])
