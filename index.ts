@@ -39,7 +39,7 @@ function modeCalculation (newArray) {
   // This function calculates the mode
   let modes = []
   let occurrences = {} // keep track of occurrences for each number
-  let highestOccurrences  = 0 // keep track of highest occurrences
+  let highestOccurrences = 0 // keep track of highest occurrences
 
   // Count occurrences of each number
   for (let counter of newArray) {
