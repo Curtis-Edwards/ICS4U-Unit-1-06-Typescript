@@ -30,7 +30,7 @@ function medianCalculation (newArray) {
       parseInt(newArray[newArray.length / 2 + 1])
     median = sum / 2
   } else {
-    median = Math.ceil(newArray.length / 2)
+    median = Math.floor(newArray.length / 2)
   }
   return median
 }
